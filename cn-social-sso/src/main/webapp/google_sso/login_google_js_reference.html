@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<!--  https://developers.google.com/identity/gsi/web/reference/js-reference  -->
+<script src="https://accounts.google.com/gsi/client"></script>
+<script>
+  function pepe() {
+	alert('pacopacopaco')
+    google.accounts.id.initialize({
+      client_id: 'id',
+      callbak: handleCredentialResponse
+    });
+    google.accounts.id.prompt();
+  };
+  function handleCredentialResponse(xx)
+  {
+	  console.log("xx" + xx)
+  }
+</script>
+</head>
+<body>
+<button onclick="pepe()">pulsa</button>
+</body>
+</html>
